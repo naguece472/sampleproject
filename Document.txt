@@ -1,0 +1,1032 @@
+https://www.w3schools.com/js
+
+
+Inpage Javascript and externalpage JavaScript
+
+<body>
+    <h1>Welcome Javascript</h1>
+<!-- Inpage javascript -->
+ <!--   <script>
+        alert("Welcome evryone");
+    </script> -->
+
+    <!-- external page javascript-->
+<script src="project.js"></script>
+</body>
+
+external page javascript
+project.js file
+alert("Welcome evreyone")
+
+
+
+Variables in JavaScript
+ Def: In Javascript , variables are used to store and manipulate data. They serve as named container that hold values.
+ 
+   Types of Variables
+      1.Var 2.Let 3.Const
+	  
+ console.log("My name is Nag");
+ console.log(My name is Nag);
+ //Uncaught SyntaxError: missing ) after argument list (at project.js:3:14)
+ // without double quotes it hrough above error we should give always "" quotes 
+ 
+ a = "apple"
+ console.log(a);
+// var variable
+ var bunnty = "playing";
+ console.log(bunnty);
+
+ var bunnty = "singing";
+ console.log(bunnty);
+
+ // Var will be change the variable everytime when you need new value
+// -------------------------------------------------
+// let variable
+let school = "nursery";
+console.log(school);
+// let school = "primary"; // Uncaught SyntaxError: Identifier 'school' has already been declared (at project.js:15:5)
+school = "primary";
+console.log(school);
+// let can be use one variable name not multiple times otherwise through error above
+
+// const variable
+
+const ground = 'stadium';
+console.log(ground);
+ground = "something";
+// console.log(ground); // Uncaught TypeError: Assignment to constant variable.
+// we can't assined the changed value firt time value is final value otherwise through error
+ 
+ Data Types
+ ==========
+ 
+ String , Number , Boolean, Null , Undefined -- Primary Datatypes
+ Array,Object -- Complex Datatypes
+ 
+ // String
+var a = "Good Work";
+// We can see data in console
+console.log(a);
+// Number 
+var num = 1000;
+console.log(num);
+console.log(5000);
+// Boolean true,false
+var test = 10 > 20;
+console.log(test);
+
+// We can see data in browser
+document.write("This is Javascript text msg <br><br>");
+// <br> line break next line print 
+// Number display
+document.write(112233);
+// html tags also give it here
+document.write("<h1>This is Heading Text</h1><br");
+// null
+let sampleView = null;
+console.log(sampleView);
+// undefined
+let apple;
+console.log(apple);
+// Array [] 
+let fruits = ["apple", "mango", 55 , {name: "nag"}];
+console.log(fruits)
+// object {} key value pair
+const games = {
+    cricket: "Dhoni",
+    chess: "viswanad"
+}
+console.log(games)
+
+  Operaters & Expressions
+  ======================
+  Operaters:
+  1.Arithmatic Operaters
+  2.Assignment Operaters
+  3.Comparision Operaters
+  4.Logical Operaters
+  
+  1.Arithmatic Operaters
+   . Addition . Subtraction .Multiplication .Division . Remainder . Increment . Decrement
+ // Addition,Mulutiplication,DIVISON,Remainder,Increment,Decrement
+var a=20;
+var b=30;
+document.write("Result Addition: ", a+b, "<br>")
+document.write("Result Mulutiplication: ", a*b, "<br>")
+document.write("Result DIVISON: ", a/b, "<br>")
+document.write("Result Remainder: ", a%b, "<br>")
+a++;
+b++;
+document.write("Result Increment a,b: ", a , " ", b ,"<br>")
+a--;
+b--;
+document.write("Result Increment a,b: ", a , " ", b ,"<br>")
+
+ Control Flow & Conditional Statement:
+ =====================================
+ .If . If-Else .If Else-if .switch
+ // If else if
+var game = "Cricket";
+let captian = 'Dhoni';
+const tennis = 'sania'
+
+if (game == "cricket"){
+document.write("Match Captian is ", captian)
+} else if(tennis == 'Sania'){
+    document.write("tennis Captian is ", tennis)
+}else{
+    document.write("Nothing Matched")
+}
+// ----------------------------------------------
+ var a =10;
+ let b=20;
+ const c = 30;
+ if (a>b){
+    document.write(b)
+ } else if(b<c){
+    document.write(c)
+ }else{
+    document.write(a)
+ }
+// ------------------------------------------------------
+Logical Operators
+=================
+. Logical NOT '!'
+. Logical AND '&&'
+. Logical OR  '||'
+// Logical Not AND OR
+var x = 100;
+let y = 200;
+const z = 300
+
+if (x>y && y>z){
+document.write(x)
+} else if(x>y || y>z){
+    document.write(y)
+}else if(x!=z){
+    document.write(z)
+}else{
+    document.write("Nothing success"); 
+}
+// ----------------------------------------
+
+// Ternary Operator
+===================
+If (condition = True){
+document.write("statement")
+}else{
+    default statement
+}
+
+condition = true?"true statement":"default stmt"
+
+document.write(2+3 == 5?"correct answer <br>":"Wrong Answer <br>")
+var x=100
+var y=50
+
+x<y ? document.write("redcolor"):document.write("green color")
+
+======================================================================
+// Dialog Boxes
+ alert prompt confirm
+alert("Hi I am Nag")
+prompt("Enetr Username")
+confirm("are you sure")
+
+var person = confirm("are you person");
+
+if(person){
+    let person = prompt("Enter Person name :");
+    document.write("Name of Person: ", person)
+} else{
+    const other = prompt("Enter other name :");
+    document.write("Name of other: ", other)
+}
+===========================================================================
+// Type Conversion
+var str = "Nag"
+document.write(typeof str)
+document.write("<br> <br>")
+
+var num = 100
+document.write(typeof num + "<br>")
+
+// convert datatype
+
+var a="55"
+var b = 10
+// conert to string to int
+var z = parseInt(a)
+document.write(typeof z + "<br>")
+// convert int to string
+var c = String(b);
+document.write(typeof c)
+=================================================
+// swith/swith-case stmts
+switch(expression) {
+  case value1:
+     break;
+	 case value2:
+     break;
+	 case value3:
+     break;
+	deafault:
+	 break;
+	 }
+switch(true){
+    case 10 > 20:
+      myAnswer = "red cololr";
+      break;
+    case 20 > 30:
+      myAnswer = "grenn cololr";
+      break;
+    case 10 < 20:
+      myAnswer = "white cololr";
+      break;
+    default:
+        myAnswer = "black cololr";
+       break
+
+}
+document.write(myAnswer)
+let name = prompt("Please enter your name");
+let marks = prompt("Please enter your name");
+switch(true){
+    case marks > 65 && marks<=100:
+      results = "Great you are the Toper";
+      break;
+    case marks > 65 && marks<=90:
+        results = "you are first class";
+      break;
+    case marks > 65 && marks<=75:
+        results = "your second class ";
+      break;
+      case marks > 35 && marks<=50:
+        results = "your thrird class ";
+      break;
+    default:
+        results = "sorry you are failed";
+       break
+
+}
+document.write(name +" marks "+ marks +" "+results)
+=================================================================
+// Functions Def : repeted code use through functions many places
+function goodStart(){
+  document.write("Hello World!");
+  console.log("test function");
+}
+
+goodStart();
+
+1. function expression 2.anonymous fun: 3. paramer and return type fun
+=====================================================================
+// Scopes
+// Global Scope
+// Function Scope
+// Block Scope
+
+// Global Scope
+var apple = "red"
+let orange = "green"
+const banana = "yellow"
+
+function fruit(){
+  document.write(apple);
+  document.write(orange);
+  document.write(banana);
+}
+
+fruit();
+
+//Function Scope
+
+function getXYZ(){
+  var x = 100
+  let y = 200
+  const z = "yellow"
+  
+  document.write(x);
+  document.write(y);
+  document.write(z);
+  
+}
+getXYZ();
+  //document.write(x); Uncaught ReferenceError: x is not defined
+ // document.write(y); Uncaught ReferenceError: y is not defined
+ // document.write(z); Uncaught ReferenceError: z is not defined
+ 
+ // Block Scope
+
+ function sports(){
+  // Block scope here
+   if (10 < 20){
+    // var let const access in side if Block
+    // var can access outside if block it will work as functional scope
+    // let const not access outside block get error Uncaught ReferenceError: tennis,vallyBall is not defined
+     var cricket = "virat"
+     let tennis = "sania"
+     const vallyBall = "chris"
+     document.write(cricket); 
+     document.write(tennis); 
+     document.write(vallyBall); 
+   }
+   document.write(cricket); 
+  // document.write(tennis);  project.js:19 Uncaught ReferenceError: tennis is not defined
+  // document.write(vallyBall);  interpreter stop above line not run this line like java compiler
+
+ }
+
+ sports();
+ ================================================================================================================
+	 Methods:
+Array Methods
+Array length
+Array toString()
+Array pop()
+Array push()
+Array shift()
+Array unshift()
+Array join()
+Array delete()
+Array concat()
+Array flat()
+Array splice()
+Array slice()
+
+// Push() = (Adds the one or 2 elements end of the array and return new length)
+
+let sprots = ["Cricket","Chess"];
+sprots.push("Socket");
+sprots.push("Socket",68);
+document.write(sprots)
+document.write(sprots.length)
+
+// pop() = (remove last element the array return that element)
+let books = ["Maths","Physics","Chemistry"];
+
+let result = books.pop();
+document.write(books+"<br>")
+document.write(books.length)
+document.write("Dleted pop result value "+result)
+
+// shift() = (Remove the first element in array return that element) it acts opposite of pop()
+let cities = ["Hyd","Mumbai","Delhi"];
+
+let result = cities.shift();
+document.write(cities+"<br>")
+document.write(cities.length)
+document.write("Remove the first element in array return that element "+result)
+
+// unshift() = (Add one or 2 elements in begining array return the length)
+let scores = [22,25,29];
+
+scores.unshift(1000);
+scores.unshift(1000,"Nag");
+document.write(scores+"<br>")
+document.write(scores.length)
+
+// concat() = ( combined r 2 or more  arrays and return new array )
+
+let scores = [12,20,30];
+let players= ["Nag","siva","seeta"];
+
+var newPlayers = scores.concat(players);
+document.write(newPlayers)
+// join() = ( Creating new string of concatenating of all elements in array and returned by string of specified character  )
+
+let team = [12,20,30,"Nag","siva","seeta"];
+
+var myTeam= team.join("")
+document.write(myTeam)
+var myTeam= team.join("***")
+document.write(myTeam)
+
+// slice() = ( return a shallow copy of portion of arrayin to new array  )
+
+let team = [12,20,30,"Nag","siva","seeta"];
+
+var myTeam= team.slice(0,4)
+document.write(myTeam)
+
+// spilce() = ( Changes the content of array by removing replacing or adding elements)
+
+let myNum = [0,1,2,3,4,5,6,7,8]
+//let newNum = myNum.splice(0, 5); 
+// remove
+//document.write(myNum+"<br>") // 5,6,7,8
+//document.write(newNum+"<br>") // 0,1,2,3,4 
+// replace
+//let newNum2 = myNum.splice(0, 4, "Something");
+//document.write(myNum+"<br>") 
+//document.write(newNum2+"<br>") 
+//let newNum3 = myNum.splice(4, 1, "Stars in SKY");
+let newNum4 = myNum.splice(4, 3, "Stars in SKY");
+document.write(myNum+"<br>") 
+document.write(newNum4+"<br>") 
+// adding value
+let newNum5= myNum.splice(3, 1, "Add value");
+document.write(myNum+"<br>") 
+document.write(newNum5+"<br>")
+// indexof() = (returns the first index at which a given element can be found in array)
+// or -1 if it is not present
+
+let student = ["Nag","siva","seeta","sagar"]
+
+document.write(student.indexOf("Nag"))
+document.write("<br>")
+document.write(student.indexOf("Naga"))
+
+var newStd = student.indexOf("Naga")
+if(newStd == -1){
+  student.push("Naga")
+}
+document.write(student)
+
+=============================================================
+
+// forEach() = (Execute provide function once for each array element)
+// callback function method or function inside paranthasis write anonymous fuction called callback function
+
+
+let scores = [10,20,30,40,50,60];
+
+let students = ["Sureh","murali","nagaraju","Harish"];
+
+students.forEach(function(item){
+    document.write(item);
+})
+document.write("<br>");
+students.forEach(function(item,index){
+    document.write(item+" " +index + "<br>");
+})
+scores.forEach(function(item){
+    document.write(item+"<br>");
+})
+===============================================================
+// Multi Dimensional Array
+//two Dimensional Array
+let marks = [
+      [10,20,30],
+      [40,50],
+      [60,70,80,90],
+      [100,110,120]
+]
+
+document.write("My student marks :", marks[1])
+document.write("My student marks :", marks[2][3]); // 2 position 4 value 
+
+
+//three Dimensional Array
+let mark = [
+    [
+        ["Anil","mahesh"],
+        ["siva","seeta"]
+    ],
+    [10,20,30],
+    [40,50],
+    [60,70,80,90],
+    [100,110,120]
+]
+
+document.write("My student mark :", mark[0][0][1])
+=================================================================
+String Methods
+String length
+String slice()
+String substring()
+String substr()
+String replace()
+String replaceAll()
+String toUpperCase()
+String toLowerCase()
+String concat()
+String trim()
+String trimStart()
+String trimEnd()
+String padStart()
+String padEnd()
+String charAt()
+String charCodeAt()
+String split()
+
+// String Methods
+// split()
+
+let sample = "This is a sample text method";
+
+document.write(sample.split(""))
+console.log(sample.split(""));
+document.write(sample.split(sample.split(" ")))
+console.log(sample.split(" "));
+
+// trim()
+
+let student = "    Ramesh     ";
+document.write(student+"<br>")
+console.log(student);
+document.write(student.trim()+"<br>")
+console.log(student.trim());
+
+// charAt()
+let stdName = "Nagaraju";
+document.write(stdName.charAt(3)+"<br>")
+=============================================================================
+// Loops
+// 1.for 2.while 3.do-while 4.foreach 5.for-in
+
+
+for(var a=0; a<10; a++){
+    document.write(a+")"+ "I Love India"+"<br>")
+}
+// while
+
+let x=0; // intialization outside
+
+while(x <= 10){
+    document.write("Hi Everyone"+"<br>")
+    x++ // inc / decrement inside loop
+}
+// do while
+let y=0;
+
+do {
+    document.write("Hi do-While "+"<br>")
+    y++ // We should give inc or decrement otherwise excecute infinite time
+}while(y<5)
+
+The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document
+What is the HTML DOM?
+The HTML DOM is a standard object model and programming interface for HTML. It defines:
+
+https://www.w3schools.com/js/
+
+The HTML elements as objects
+The properties of all HTML elements
+The methods to access all HTML elements
+The events for all HTML elements
+
+In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+
+The DOM Programming Interface
+The HTML DOM can be accessed with JavaScript (and with other programming languages).
+
+In the DOM, all HTML elements are defined as objects.
+
+The programming interface is the properties and methods of each object.
+
+A property is a value that you can get or set (like changing the content of an HTML element).
+
+A method is an action you can do (like add or deleting an HTML element)
+
+Dom Manipulation
+
+Methods:
+1) getElementById
+2) getElementByClassName
+3) getElementByTagName
+4) querySelector
+5) querySelectorall
+6) seTAttribute
+7)  removeAttribute
+
+Properties
+1) innerText
+2) innerHTML
+3) textContent
+4) value
+5) name
+6) attributes
+7) getAttributes
+7) setAttributes
+
+// DOM Manipulation dom methods and properties
+// getElementById using target elements
+const a = document.getElementById("person");
+a.innerText = "Raju"
+
+// getElementById  innerHTML
+const b = document.getElementById("demo");
+
+b.innerHTML = "<h1>HelloWorld!</h1>"
+
+// getElementById textContent using target elements
+const c = document.getElementById("person");
+c.textContent = "Naga Raju"
+
+<div>
+        <ul>
+          <li class="revenue">Revenu</li>
+        </ul>
+    </div>
+// DOM Manipulation dom methods and properties
+// getElementBy using target elements
+var a = document.getElementsByClassName("intro");
+a[0].innerText = "Nag" // try to give here array some index otherwiswe not working
+a[0].textContent = "Raj"
+a[0].innerHTML = "<h1> Welome Nag </h1>"
+
+// DOM Manipulation dom methods and properties
+// getElementByTag using target elements
+var a1 = document.getElementsByTagName("p");
+a1[0].textContent = "Hello Nag Good AfterNoon" ;
+
+var a2 = document.getElementsByTagName("p")[1];
+a2.innerText = "Welcome Nag" ;
+
+// target all paragraph tags
+
+var a3 = document.getElementsByTagName("p");
+console.log(a3)
+for(let i=0; i<a3.length; i++){
+    a3[i].innerHTML= "<h1>Hello EveryOne!</h1>"
+}
+
+let b = document.getElementsByTagName("h1");
+b[0].innerHTML = "Hello Nag Good Night" ;
+
+// console.log(a1);
+
+// DOM Manipulation dom methods and properties
+// querySelector && querySelectorAll  using target elements of all classname , tagname and id will change
+var a1 = document.querySelector("h1");
+a1.innerHTML ="Hiii Nag"
+
+var p1 = document.querySelector("p");
+p1.innerHTML ="Hello Nag"
+
+var p2 = document.querySelectorAll("p");
+
+for(let i=0; i<p2.length; i++){
+    p2[i].innerHTML= "<h1>Hello EveryOne!</h1>"
+}
+
+
+// innerText vs textContent  difference
+var targetHidden = document.querySelector("h2");
+// console.log(targetHidden.innerText)
+console.log(targetHidden.textContent)
+
+Generic Attributes
+Here's a table of some other attributes that are readily usable with many of the HTML tags.
+Attribute :
+align 
+valign 
+bgcolor 
+background 
+id 
+class 
+width 
+height
+title 
+
+const targetAttr = document.querySelector("p").attributes.id;
+console.log(targetAttr);
+
+const targetAttr2 = document.querySelector("p").attributes.id.name;
+console.log(targetAttr2);
+
+const targetAttr3 = document.querySelector("p").attributes.id.value;
+document.write(targetAttr3);
+
+will do all attributes i tried only one ID attribute
+
+// set attributes
+
+const targetAttr = document.querySelector("p");
+targetAttr.setAttribute("style","red")
+
+console.log(targetAttr);
+
+// remove attributes
+
+const targetAttr = document.querySelector("p");
+targetAttr.removeAttribute("style","red")
+
+console.log(targetAttr);
+
+// css target attributes concepts
+
+document.querySelector("p").style.backgroundColor = "black";
+=====================================================================
+
+Events and Events Listner
+=========================
+
+action perfom backend source called Events
+Events:
+MouseEvents:
+.click .dblclick(doubleclick) .mouseover .mouseout .mouseenter .mouseleave .mousedown .mousup
+
+KeyboardEvents:
+.keydown .keyup .keypress
+
+FormEvents
+.submit .reset .focus .blur .change .input
+
+Event based creat function called eventlistner
+
+// events & EventListners
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo">Welcome!</p>
+function myFunction() {
+    document.getElementById("demo").innerText = "Hello World";
+  } 
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="illustration-1.png" alt="Smiley" width="32" height="32">
+<script>
+function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+</script>
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+<h2>The removeEventListener() Method</h2>
+
+<div id="myDIV">This orange element has an onmousemove event handler that displays a random number when you move the mouse inside.
+  <p>Click "Remove" to remove the event handler.</p>
+  <button onclick="removeHandler()">Remove</button>
+</div>
+
+<p id="demo"></p>
+
+<script>
+const myDiv = document.getElementById("myDIV");
+myDiv.addEventListener("mousemove", myFunction);
+
+function removeHandler() {
+  myDiv.removeEventListener("mousemove", myFunction);
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+</script>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<form action="" id="loginForm">
+    <h1>Login</h1>
+    <input type="text" id="username" class="form-control" placeholder="Enter your Username...">
+    
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2 id="name" style="color: blue;"></h2>
+
+  <select id="myColor">
+     <option>Red</option>
+     <option>Green</option>
+     <option>Black</option>
+  </select>
+  <div id="myBox">
+
+  </div>
+<script>
+   const loginForm = document.getElementById("loginForm");
+   const userName = document.getElementById("username");
+
+   const inputName = document.getElementById("name");
+
+   loginForm.addEventListener('submit', function(event){
+          event.preventDefault();
+          const myUserName =  userName.value;
+
+          inputName.textContent = myUserName;
+   })
+
+   const userName2 = document.getElementById("username");
+
+   userName2.addEventListener("focus", function(event){
+    console.log(event.target)
+    event.target.style.background = 'pink'
+   })
+
+const myColor = document.getElementById("myColor");
+const myBox = document.getElementById("box");
+
+myColor.addEventListener('change', function(){
+    myBox.style.background = myColor.value;
+})
+
+</script>
+
+</body>
+</html>
+
+Class List in JavaScript
+
+ClassList is a proprty of DOM elements that represents a collection of classes applied to the element
+
+Methods: Add Remove Toggle contain Replace
+
+<!DOCTYPE html>
+<html>
+<style>
+.myStyle {
+  background-color: coral;
+  padding: 16px;
+}
+.anotherClass {
+  text-align: center;
+  font-size: 25px;
+}
+.thirdClass {
+  text-transform: uppercase;
+}
+</style>
+
+<body>
+<h1>The DOMToken Object</h1>
+<h2>The add() Method</h2>
+
+<button onclick="myFunction()">Add</button> 
+<p>Click "Add" to add the "myStyle" class to myDIV.</p>
+<button onclick="removeFunction()">Remove</button> <br><br>
+<p>Click "Remove" to remove the "myStyle" class from myDIV.</p>
+<button onclick="myToggle()">Toggle</button> <br><br>
+<p>Click "Toggle" to toggle "myStyle" on and off.</p>
+<div id="myDIV" class="myStyle anotherClass thirdClass">
+    <p>I am myDIV.</p>
+    </div>
+    
+    <p>Does the "myDIV" element have a class of "myStyle"?</p>
+    <p id="demo"></p>
+<p>I am a myDIV.</p>
+</div>
+
+<script>
+function myFunction() {
+  const list = document.getElementById("myDIV").classList;
+  list.add("myStyle");
+}
+function removeFunction() {
+    const list= document.getElementById("myDIV").classList;
+    list.remove("myStyle");
+}
+function myToggle() {
+  document.getElementById("myDIV").classList.toggle("myStyle");
+}
+
+//let x = document.getElementById("myDIV").classList.contains("myStyle");
+//document.getElementById("demo").innerHTML = x;
+
+let y = document.getElementById("myDIV").classList.contains("anotherClass");
+document.getElementById("demo").innerHTML = y;
+
+let z = document.getElementById("myDIV").classList.contains("thirdClass");
+document.getElementById("demo").innerHTML = z;
+
+</script>
+
+</body>
+</html>
+
+=====================================================================================================
+
+Built in Date
+
+// Date
+
+let toDay = new Date();
+
+document.write(toDay + "<br>") 
+// getDate getMonth getFullYear
+//document.write(toDay.getDate() + "<br>")
+//document.write(toDay.getMonth() + 1 + + "<br>")
+//document.write(toDay.getFullYear() + "<br>")
+
+// setDate setMonth setYear
+//toDay.setDate(15)
+//document.write(toDay + "<br>")
+//toDay.setMonth(5)
+//document.write(toDay + "<br>")
+toDay.setFullYear(2024)
+document.write(toDay + "<br>") 
+
+// Math
+
+//let calculate = Math.ceil(10.01)
+//let calculate = Math.floor(10.91)
+//let calculate = Math.round(10.51)
+//let calculate = Math.max(10, 20, 1880,70)
+//let calculate = Math.min(10, 20, 1880,70)
+//let calculate = Math.random()
+//let calculate = Math.random() * 10
+let calculate = Math.round(Math.random() * 100)
+document.write(calculate);
+
+// Object
+
+const capital = {
+    india: "New Delhi",
+    telagana: "Hyd",
+    ap: "vizag",
+    location: function(){
+        return " I am Living in " + this.ap;
+    }
+}
+
+document.write(capital.ap);
+document.write(capital.location());
+
+capital.ap="Amaravathi";
+document.write(capital.ap);
+
+capital.karnataka = "Banglore"
+document.write(capital.karnataka);
+console.log(capital)
+
+// create ojbject using new keyword
+
+const fruit = new Object();
+
+fruit.apple = "red"
+fruit.mango = "yellow"
+
+document.write(fruit.apple);
+console.log(fruit)
+
+<h1 id="title" >Welcome to Javascript</h1>
+// set nad clear interval
+
+  const Animator = setInterval(sampleAnimation, 1000);
+
+  let a=0;
+
+  function sampleAnimation(){
+    a = a+1;
+
+
+    if (a == 5){
+        clearInterval(Animator)
+    } else{
+        const textAnimation = document.getElementById("title");
+        textAnimation.style.fontSize = a + "rem"
+    }
+  //  const textAnimation = document.getElementById("title");
+ //   textAnimation.style.fontSize = a + "rem"
+  }
+  
+ 
+
+<button id="stop" onclick="stopAction()">Stop Action</button>
+// set and clear Timeout
+
+  const changer = setTimeout(function(){
+
+   var myElement = document.getElementById("title");
+   myElement.style.color = "red"
+   myElement.style.fontSize = "5rem"
+  }, 5000)
+
+  function stopAction(){
+    clearTimeout(changer);
+  }
+
+===========================================================
+
+visual studio short cuts
+
+select proj and go inside type cmd
+command 1) code .  //it will open visualstudion code editor
+command 2) ctrl+shift+N // open new visualstudion code editor
+command 3) ctrl+N // open new file
+command 4) ctrl+S // save the file
+command 5) ctrl+P // search the file
+command 5) ctrl+PageUp/ctrl+PageUp // navigation the files front or back
+command 5) ctrl+K ctrl+W // remove all files
+command 5) ctrl+W // remove onefile
+command 5) ctrl+Shift+T // open files from closed files
+command 5) ctrl+B //size setup left data need or not
+command 5) ctrl+ ctrl- zoom in/out
+command 5) ctrl+J // Terminal in / out
+command 5) ctrl+M // minimize VisualStudio
+command 5) ctrl+G // selecet line no
+command 5) ctrl+F // search data
+command 5) ctrl+/ // comment in/out selected or single line using same command important
+
+https://kalyandevara.blogspot.com/2023/09/visual-studio-code-keyboard-shortcuts.html
+
+===============================================================================
